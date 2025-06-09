@@ -79,13 +79,4 @@ func main() {
 		}
 		file.Close()
 	}
-
-	// Open files in VS Code
-	cmd = exec.Command("code", "main.go", "main_test.go")
-	cmd.Stdout = os.Stdout
-	cmd.Stderr = os.Stderr
-	if err := cmd.Start(); err != nil {
-		fmt.Println("Failed to open files in VS Code")
-		os.Exit(1)
-	}
 }
